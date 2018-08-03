@@ -15,9 +15,10 @@ J = 0;
 
 
 for i=1:m
-    J = J + (transpose(theta)*transpose(X(i,:))-y(i,:))^2
+    J = J + (transpose(theta)*transpose(X(i,:))-y(i,:))^2;
 end
-J = J/(2*m)
+J = J/(2*m);
+J
 
 
 
