@@ -21,12 +21,25 @@ for iter = 1:num_iters
     sum_1 = 0;
     
     for i=1:m
-        sum_0 = sum_0 + (transpose(theta)*transpose(X(i,:))-y(i,:))*X(i,1);
+        sum_0 = sum_0 + (transpose(theta)*transpose(X(i,:))-y(i,:))*X(i,1);;
         sum_1 = sum_1 + (transpose(theta)*transpose(X(i,:))-y(i,:))*X(i,2);
     end
     
     theta(1,1) = theta(1,1) - alpha/m*sum_0;
     theta(2,1) = theta(2,1) - alpha/m*sum_1;
+
+%     n = size(X,2);
+%     
+%     for j=1:n
+%         sum = 0;
+%         
+%         for i=1:m
+%             sum = sum + (transpose(theta)*transpose(X(i,:))-y(i,:))*X(i,j);
+%         end
+%         
+%         theta(j,:) = theta(j,:) - alpha/m*sum;
+%         
+%     end
 
     % ============================================================
 
